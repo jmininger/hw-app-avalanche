@@ -4,4 +4,7 @@ pkgs.mkYarnPackage {
   version = "0.1.0";
   yarnLock = ./yarn.lock;
   src = pkgs.lib.sources.cleanSource ./.;
+  buildPhase = ''
+    yarn build
+  '';
 }
